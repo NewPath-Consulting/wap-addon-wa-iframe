@@ -1,0 +1,15 @@
+{
+	"apiVersion": 2,
+	"name": "create-block/wawp-addon-wa-iframe",
+	"title": "Wild Apricot iFrame",
+	"category": "embed",
+	"icon": "smiley",
+	"description": "Showcase a Wild Apricot widget on your WordPress site with a Gutenberg block!",
+	"supports": {
+		"html": false
+	},
+	"textdomain": "wawp-addon-wa-iframe",
+	"editorScript": "file:./build/index.js",
+	"editorStyle": "file:./build/index.css",
+	"style": "file:./build/style-index.css"
+}
