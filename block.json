@@ -1,6 +1,6 @@
 {
 	"apiVersion": 2,
-	"name": "create-block/wawp-addon-wa-iframe",
+	"name": "wawp/wawp-addon-wa-iframe",
 	"title": "Wild Apricot iFrame",
 	"category": "embed",
 	"icon": "smiley",
