@@ -50,13 +50,13 @@
 				 <TextControl
 					 label={'Height'}
 					 onChange={ (val) => setAttributes( { height: val } ) }
-					 value={attributes.height}
+					 value={ attributes.height }
 				 >
 				 </TextControl>
 				 <TextControl
 					 label={'Width'}
 					 onChange={ (val) => setAttributes( { width: val } ) }
-					 value={attributes.width}
+					 value={ attributes.width }
 				 >
 				 </TextControl>
 				 <TextControl
@@ -71,7 +71,7 @@
 				<iframe
 					width={attributes.width}
 					height={attributes.height}
-					src={"https://resources.mcabc.org/" + attributes.widget_url}
+					src={"https://newpathconsulting.wildapricot.org/" + attributes.widget_url}
 					className={"wawp " + attributes.name}
 					frameborder={'no'}
 					sandbox={"allow-same-origin allow-scripts allow-popups allow-forms"}
