@@ -29,7 +29,7 @@
 	 attributes: {
 		 widget_url: {
 			 type: 'string',
-			 default: '',
+			 default: 'widget/member-forum',
 		 },
 		 height: {
 			 type: 'string',
