@@ -68,16 +68,16 @@
 				 </TextControl>
 			 </InspectorControls>
 			 <div {...useBlockProps.save()} >
-			 <iframe
-				 width={attributes.width}
-				 height={attributes.height}
-				 src={"https://resources.mcabc.org/" + attributes.widget_url}
-				 className={"wawp " + attributes.name}
-				 frameborder={'no'}
-				 sandbox={"allow-same-origin allow-scripts allow-popups allow-forms"}
-			 >
-			 </iframe>
-		 </div>
+				<iframe
+					width={attributes.width}
+					height={attributes.height}
+					src={"https://resources.mcabc.org/" + attributes.widget_url}
+					className={"wawp " + attributes.name}
+					frameborder={'no'}
+					sandbox={"allow-same-origin allow-scripts allow-popups allow-forms"}
+				>
+				</iframe>
+		 	</div>
 
 		 </div>
 	 );
