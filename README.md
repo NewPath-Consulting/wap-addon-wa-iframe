@@ -3,7 +3,16 @@
 This plugin installs a Gutenberg block which allows the user to include an iFrame with a Wild Apricot widget. 
 
 ## How to install
-Clone or download this repository directly in your WordPress site's `wp-content/plugins` folder. Do not compress and install it via the plugin installer on your site.
+0. Clone or download this repository.
+1. Compress the plugin folder.
+2. Upload the plugin zip archive to your WordPress site using the plugin installer. 
+
+OR
+
+0. Clone or download this repository directly in your WordPress site's `wp-content/plugins` folder. 
+1. Browse to the "Plugins" page on your site, look for "Wild Apricot iFrame Add-on for WAWP", and activate the plugin.
+
+
 
 ## How to contribute
 
@@ -14,9 +23,9 @@ Clone or download this repository directly in your WordPress site's `wp-content/
 
 #### Run and test
 3. Run `npm start` to run the React compiler. 
-4. To test this plugin, activate it from the plugin UI and find "Wild Apricot iFrame" in the block inserter. Since the plugin folder is already in the plugins directory, there is no need to reinstall it when you're testing. 
+4. To test this plugin, activate it from the plugin UI and find "Wild Apricot iFrame" in the block inserter. Since the plugin folder is already in the plugins directory, there is no need to reinstall it when you're testing. **Always make sure the build (in `build`) files are up-to-date when testing this plugin**.
 
-### Other useful `npm` commands
+#### Other useful `npm` commands
 `npm start`
 Starts the build for development.
 
