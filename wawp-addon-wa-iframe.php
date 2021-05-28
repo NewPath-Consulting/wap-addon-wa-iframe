@@ -20,7 +20,15 @@
  *
  * @see https://developer.wordpress.org/block-editor/tutorials/block-tutorial/writing-your-first-block-type/
  */
+
+const ADDON_PATH = ABSPATH . 'wp-content/plugins/wawp/src/Addon.php';
+// include (ADDON_PATH);
+// require_once ADDON_PATH;
+// use WAWP\Addon;
+
 function create_block_wawp_addon_wa_iframe_block_init() {
 	register_block_type_from_metadata( __DIR__ );
+	// Addon::instance()->new_addon(array('wawp-addon-wa-iframe' => 'Wild Apricot iFrame'));
 }
+
 add_action( 'init', 'create_block_wawp_addon_wa_iframe_block_init' );

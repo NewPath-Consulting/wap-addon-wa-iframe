@@ -261,7 +261,7 @@ function Edit({
   })), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__["useBlockProps"].save(), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("iframe", {
     width: attributes.width,
     height: attributes.height,
-    src: "https://resources.mcabc.org/" + attributes.widget_url,
+    src: "https://newpathconsulting.wildapricot.org/" + attributes.widget_url,
     className: "wawp " + attributes.name,
     frameborder: 'no',
     sandbox: "allow-same-origin allow-scripts allow-popups allow-forms"
@@ -329,7 +329,7 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__["registerBlockType"])('waw
   attributes: {
     widget_url: {
       type: 'string',
-      default: ''
+      default: 'widget/member-forum'
     },
     height: {
       type: 'string',
@@ -406,7 +406,7 @@ function save({
   return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__["useBlockProps"].save(), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("iframe", {
     width: attributes.width,
     height: attributes.height,
-    src: "https://resources.mcabc.org/" + attributes.widget_url,
+    src: "https://newpathconsulting.wildapricot.org/" + attributes.widget_url,
     className: "wawp " + attributes.name,
     frameborder: 'no',
     sandbox: "allow-same-origin allow-scripts allow-popups allow-forms"
