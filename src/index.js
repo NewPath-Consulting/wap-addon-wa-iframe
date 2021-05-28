@@ -27,6 +27,10 @@
   */
  registerBlockType( 'wawp/wawp-addon-wa-iframe', {
 	 attributes: {
+		 domain_name: {
+			 type: 'string',
+			 default: 'newpathconsulting'
+		 },
 		 widget_url: {
 			 type: 'string',
 			 default: 'widget/member-forum',

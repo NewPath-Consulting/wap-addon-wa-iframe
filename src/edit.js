@@ -12,11 +12,10 @@
   * @see https://developer.wordpress.org/block-editor/packages/packages-block-editor/#useBlockProps
   */
  
- import { TextControl } from '@wordpress/components';
-  
+ import { Panel, PanelBody, PanelRow, TextControl } from '@wordpress/components';
+
  import {
 	 useBlockProps,
-	 ColorPalette,
 	 InspectorControls,
  } from '@wordpress/block-editor';
  
@@ -40,45 +39,62 @@
 	 return (
 		 <div { ...useBlockProps() }>
 			 <InspectorControls key="setting">
-				 <TextControl
-					 label={'Widget URL'}
-					 onChange={ (val) => setAttributes( { widget_url: val } ) }
-					 value={attributes.widget_url}
-					 placeholder={"Widget URL here"}
-				 >
-				 </TextControl>
-				 <TextControl
-					 label={'Height'}
-					 onChange={ (val) => setAttributes( { height: val } ) }
-					 value={ attributes.height }
-				 >
-				 </TextControl>
-				 <TextControl
-					 label={'Width'}
-					 onChange={ (val) => setAttributes( { width: val } ) }
-					 value={ attributes.width }
-				 >
-				 </TextControl>
-				 <TextControl
-					 label={'Name'}
-					 onChange={ (val) => setAttributes( { name: val } ) }
-					 value={attributes.name}
-					 placeholder={"Name of Widget"}
-				 >
-				 </TextControl>
+				<PanelBody title="iFrame Settings" initialOpen={ true }>
+					<PanelRow>
+						<TextControl
+							label={'Wild Apricot Domain'}
+							onChange={  (val) => setAttributes( { domain_name: val } ) }
+							value={attributes.domain_name}
+						>
+						</TextControl>
+					</PanelRow>
+					<PanelRow>
+						<TextControl
+							label={'Widget URL'}
+							onChange={ (val) => setAttributes( { widget_url: val } ) }
+							value={attributes.widget_url}
+							placeholder={"Widget URL here"}
+						>
+						</TextControl>
+					</PanelRow>
+					<PanelRow>
+						<TextControl
+							label={'Height'}
+							onChange={ (val) => setAttributes( { height: val } ) }
+							value={ attributes.height }
+						>
+						</TextControl>
+					</PanelRow>
+					<PanelRow>
+						<TextControl
+							label={'Width'}
+							onChange={ (val) => setAttributes( { width: val } ) }
+							value={ attributes.width }
+						>
+						</TextControl>
+					</PanelRow>
+					<PanelRow>
+						<TextControl
+							label={'Name'}
+							onChange={ (val) => setAttributes( { name: val } ) }
+							value={attributes.name}
+							placeholder={"Name of Widget"}
+						>
+						</TextControl>
+					</PanelRow>
+				</PanelBody>
 			 </InspectorControls>
 			 <div {...useBlockProps.save()} >
 				<iframe
 					width={attributes.width}
 					height={attributes.height}
-					src={"https://newpathconsulting.wildapricot.org/" + attributes.widget_url}
+					src={"https://" + attributes.domain_name + ".wildapricot.org/" + attributes.widget_url}
 					className={"wawp " + attributes.name}
 					frameborder={'no'}
 					sandbox={"allow-same-origin allow-scripts allow-popups allow-forms"}
 				>
 				</iframe>
 		 	</div>
-
 		 </div>
 	 );
  }
