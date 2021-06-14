@@ -21,17 +21,32 @@
  * @see https://developer.wordpress.org/block-editor/tutorials/block-tutorial/writing-your-first-block-type/
  */
 
-use WAWP\Addon;
+// use WAWP\Addon;
+use WAWP\Activator;
+
+$activator_dir = ABSPATH . 'wp-content/plugins/wawp/src/Activator.php';
+
+require_once ($activator_dir);
+
 
 function create_block_wawp_addon_wa_iframe_block_init() {
 	register_block_type_from_metadata( __DIR__ );
-	if (class_exists('WAWP\Addon')) {
-		WAWP\Addon::instance()::new_addon(array('wawp-addon-wa-iframe' => 'Wild Apricot iFrame'));
-	} else {
+	if (!class_exists('WAWP\Activator')) {
 		deactivate_plugins(plugin_basename(__FILE__));
-		wp_die(__('This plugin requires that Wild Apricot for Wordpress is installed. ', 'textdomain'));
+		add_action('admin_notices', 'wawp_not_loaded');
 	}
-	
+}
+
+function wawp_not_loaded() {
+    printf(
+      '<div class="error"><p>%s</p></div>',
+      __('This plugin requires that Wild Apricot for Wordpress is installed.')
+    );
 }
 
 add_action( 'init', 'create_block_wawp_addon_wa_iframe_block_init' );
+
+if (class_exists('WAWP\Activator')) {
+	$activator = new WAWP\Activator('wawp-addon-wa-iframe', plugin_basename(__FILE__), 'Wild Apricot iFrame Add-on');
+}
+
