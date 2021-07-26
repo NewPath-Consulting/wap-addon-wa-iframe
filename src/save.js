@@ -12,6 +12,7 @@
   * @see https://developer.wordpress.org/block-editor/packages/packages-block-editor/#useBlockProps
   */
  import { useBlockProps } from '@wordpress/block-editor';
+ import generateiFrame from './index';
  
  /**
   * The save function defines the way in which the different attributes should
@@ -25,15 +26,7 @@
  export default function save({attributes}) {
 	 return (
         <div {...useBlockProps.save()} >
-            <iframe
-                width={attributes.width}
-                height={attributes.height}
-                src={"https://" + attributes.domain_name + ".wildapricot.org/" + attributes.widget_url}
-                className={"wawp " + attributes.name}
-                frameborder={'no'}
-                sandbox={"allow-same-origin allow-scripts allow-popups allow-forms"}
-            >
-            </iframe>
+            { generateiFrame(attributes) }
         </div>
 	 );
  }

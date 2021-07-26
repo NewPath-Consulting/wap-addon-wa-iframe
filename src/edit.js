@@ -18,7 +18,7 @@
 	 useBlockProps,
 	 InspectorControls,
  } from '@wordpress/block-editor';
- 
+ import generateiFrame from './index';
  /**
   * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
   * Those files can contain any CSS code that gets applied to the editor.
@@ -85,15 +85,7 @@
 				</PanelBody>
 			 </InspectorControls>
 			 <div {...useBlockProps.save()} >
-				<iframe
-					width={attributes.width}
-					height={attributes.height}
-					src={"https://" + attributes.domain_name + ".wildapricot.org/" + attributes.widget_url}
-					className={"wawp " + attributes.name}
-					frameborder={'no'}
-					sandbox={"allow-same-origin allow-scripts allow-popups allow-forms"}
-				>
-				</iframe>
+				 { generateiFrame(attributes) }
 		 	</div>
 		 </div>
 	 );

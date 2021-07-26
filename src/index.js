@@ -58,3 +58,25 @@
 	  */
 	 save,
  } );
+
+export default function generateiFrame(attributes) {
+	var url = "https://" + attributes.domain_name + ".wildapricot.org";
+	return (            
+		<React.Fragment>
+			<iframe
+				width={attributes.width}
+				height={attributes.height}
+				src={url + "/" + attributes.widget_url}
+				className={"wawp " + attributes.name}
+				frameborder={'no'}
+				sandbox={"allow-same-origin allow-scripts allow-popups allow-forms"}
+				onload={'tryToEnableWACookies("' + url + '");'}
+			></iframe>
+			<script
+				type="text/javascript" 
+				language="javascript" 
+				src={url + "/Common/EnableCookies.js"}>
+			</script>
+		</React.Fragment>
+	);
+}
