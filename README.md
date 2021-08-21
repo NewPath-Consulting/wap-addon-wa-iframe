@@ -22,8 +22,9 @@ You must also obtain a free license to enable use. See the [NewPath website](htt
 <img src="assets/images/settings.png" height="500px">
 You now should be able to see the block settings panel on the right side of the post editor.
 <img src="assets/images/panel.png" height="500px">
-5. Enter your Wild Apricot domain name (`<your domain name>.wildapricot.com`) and the URL of the widget you wish to embed. 
-    5.1 Instructions on how to find widgets on Wild Apricot can be found [here](https://gethelp.wildapricot.com/en/articles/222-using-widgets).
+5. Enter your Wild Apricot domain name `<yourorgname>.wildapricot.org` and the path of the widget you wish to embed.
+
+Instructions on the available Wild Apricot widgets are available [here](https://gethelp.wildapricot.com/en/articles/222-using-widgets).
 
 
 ## How to contribute
