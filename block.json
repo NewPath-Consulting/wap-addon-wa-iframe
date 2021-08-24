@@ -3,7 +3,7 @@
 	"name": "wawp/wawp-addon-wa-iframe",
 	"title": "Wild Apricot iFrame",
 	"category": "embed",
-	"icon": "smiley",
+	"icon": "media-code",
 	"description": "Showcase a Wild Apricot widget on your WordPress site with a Gutenberg block!",
 	"supports": {
 		"html": false
