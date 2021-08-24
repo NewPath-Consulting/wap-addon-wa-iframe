@@ -12,6 +12,8 @@ OR
 0. Clone or download this repository directly in your WordPress site's `wp-content/plugins` folder. 
 1. Browse to the "Plugins" page on your site, look for "Wild Apricot iFrame Add-on for WAWP", and activate the plugin.
 
+You must also obtain a free license to enable use. See the [NewPath website](https://newpathconsulting.com/wawp) to register for a free license.
+
 ## How to use
 1. Make a new post or page. Browse to the block inserter (`+` on the top left of the post editor).
 2. Find the Wild Apricot iFrame block in the Embeds section.
@@ -20,8 +22,9 @@ OR
 <img src="assets/images/settings.png" height="500px">
 You now should be able to see the block settings panel on the right side of the post editor.
 <img src="assets/images/panel.png" height="500px">
-5. Enter your Wild Apricot domain name (`<your domain name>.wildapricot.com`) and the URL of the widget you wish to embed. 
-    5.1 Instructions on how to find widgets on Wild Apricot can be found [here](https://gethelp.wildapricot.com/en/articles/222-using-widgets).
+5. Enter your Wild Apricot domain name `<yourorgname>.wildapricot.org` and the path of the widget you wish to embed.
+
+Instructions on the available Wild Apricot widgets are available [here](https://gethelp.wildapricot.com/en/articles/222-using-widgets).
 
 
 ## How to contribute
