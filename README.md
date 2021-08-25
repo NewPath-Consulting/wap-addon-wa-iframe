@@ -12,7 +12,7 @@ OR
 0. Clone or download this repository directly in your WordPress site's `wp-content/plugins` folder. 
 1. Browse to the "Plugins" page on your site, look for "Wild Apricot iFrame Add-on for WAWP", and activate the plugin.
 
-You must also obtain a free license to enable use. See the [NewPath website](https://newpathconsulting.com/wawp) to register for a free license.
+You must also obtain a [free license to enable use](https://github.com/NewPath-Consulting/Wild-Apricot-For-Wordpress#licensing-wawp). See the [NewPath website](https://newpathconsulting.com/wawp) to register for a free license.
 
 ## How to use
 1. Make a new post or page. Browse to the block inserter (`+` on the top left of the post editor).
