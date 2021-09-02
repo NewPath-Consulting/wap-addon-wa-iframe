@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name:       Wild Apricot iFrame Add-on (WAP)
+ * Plugin Name:       WAP Wild Apricot iFrame Add-on
  * Description:       Showcase a Wild Apricot widget using an iframe on your WordPress site with a Gutenberg block!
  * Requires at least: 5.7
  * Requires PHP:      7.0
