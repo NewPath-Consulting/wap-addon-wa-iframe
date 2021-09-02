@@ -1,4 +1,4 @@
-# WAWP Wild Apricot iFrame Add On
+# WAP Wild Apricot iFrame Add On
 
 This plugin installs a Gutenberg block which allows the user to include an iFrame with a Wild Apricot widget. 
 
@@ -10,7 +10,7 @@ This plugin installs a Gutenberg block which allows the user to include an iFram
 OR
 
 0. Clone or download this repository directly in your WordPress site's `wp-content/plugins` folder. 
-1. Browse to the "Plugins" page on your site, look for "Wild Apricot iFrame Add-on for WAWP", and activate the plugin.
+1. Browse to the "Plugins" page on your site, look for "WAP Wild Apricot iFrame Add-on", and activate the plugin.
 
 You must also obtain a [free license to enable use](https://github.com/NewPath-Consulting/Wild-Apricot-For-Wordpress#licensing-wawp). See the [NewPath website](https://newpathconsulting.com/wawp) to register for a free license.
 
