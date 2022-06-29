@@ -25,13 +25,13 @@
 const SLUG = 'wawp-addon-iframe'; 
 const SHOW_NOTICE_ACTIVATION = 'show_notice_activation_' . SLUG;
 const LICENSE_CHECK = 'license-check-' . SLUG;
-const NAME = 'Wild Apricot iFrame Add-on for WAWP';
+const NAME = 'Wild Apricot iFrame Add-on for WAP';
 
 add_action( 'init', 'create_block_wawp_addon_wa_iframe_block_init' );
 function create_block_wawp_addon_wa_iframe_block_init() {
 	if (!class_exists('WAWP\Addon')) {
-		deactivate_plugins(plugin_basename(__FILE__));
-		add_action('admin_notices', 'wawp_not_loaded');
+		wawp_iframe_not_loaded_die();
+		return;
 	}
 	$license_valid = WAWP\Addon::instance()::has_valid_license(SLUG);
 	if (!$license_valid) return;
@@ -42,11 +42,16 @@ function create_block_wawp_addon_wa_iframe_block_init() {
 /**
  * Error message for if WAWP is not installed or activated.
  */
-function wawp_not_loaded_notice_msg() {
+function wawp_iframe_not_loaded_notice_msg() {
 	echo "<div class='error'><p><strong>";
 	echo NAME . '</strong> requires that Wild Apricot for Wordpress is installed and activated.</p></div>';
 	unset($_GET['activate']);
 	return;
+}
+
+function wawp_iframe_not_loaded_die() {
+	deactivate_plugins(plugin_basename(__FILE__));
+	add_action('admin_notices', 'wawp_iframe_not_loaded_notice_msg');
 }
 
 // add_action('init', 'add_to_addon_list');
@@ -71,8 +76,8 @@ function wawp_not_loaded_notice_msg() {
  * Checks if WAWP is loaded. Deactivate if not.
  * Calls Addon::activate() function which checks for a license key and sets appropriate flags.
  */
-register_activation_hook(plugin_basename(__FILE__), 'activate');
-function activate() {
+register_activation_hook(plugin_basename(__FILE__), 'wawp_iframe_activate');
+function wawp_iframe_activate() {
 	if (!class_exists('WAWP\Addon')) {
 		wawp_not_loaded_die();
 		return;
@@ -85,8 +90,8 @@ function activate() {
  * Deactivation function.
  * Deletes the plugin from the list of WAWP plugins in the options table.
  */
-register_deactivation_hook(plugin_basename(__FILE__), 'deactivate');
-function deactivate() {
+register_deactivation_hook(plugin_basename(__FILE__), 'wawp_iframe_deactivate');
+function wawp_iframe_deactivate() {
 	// remove from addons list
 	$addons = get_option('wawp_addons');
 	unset($addons[SLUG]);
