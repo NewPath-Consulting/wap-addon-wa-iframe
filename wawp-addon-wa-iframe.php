@@ -22,10 +22,10 @@
  */
 
 
-const SLUG = 'wawp-addon-iframe'; 
-const SHOW_NOTICE_ACTIVATION = 'show_notice_activation_' . SLUG;
-const LICENSE_CHECK = 'license-check-' . SLUG;
-const NAME = 'Wild Apricot iFrame Add-on for WAP';
+const WAWP_IFRAME_SLUG = 'wawp-addon-iframe'; 
+const WAWP_IFRAME_SHOW_NOTICE_ACTIVATION = 'show_notice_activation_' . WAWP_IFRAME_SLUG;
+const WAWP_IFRAME_LICENSE_CHECK = 'license-check-' . WAWP_IFRAME_SLUG;
+const WAWP_IFRAME_NAME = 'Wild Apricot iFrame Add-on for WAP';
 
 add_action( 'init', 'create_block_wawp_addon_wa_iframe_block_init' );
 function create_block_wawp_addon_wa_iframe_block_init() {
@@ -33,7 +33,7 @@ function create_block_wawp_addon_wa_iframe_block_init() {
 		wawp_iframe_not_loaded_die();
 		return;
 	}
-	$license_valid = WAWP\Addon::instance()::has_valid_license(SLUG);
+	$license_valid = WAWP\Addon::instance()::has_valid_license(WAWP_IFRAME_SLUG);
 	if (!$license_valid) return;
 	register_block_type_from_metadata( __DIR__ );
 
@@ -44,7 +44,7 @@ function create_block_wawp_addon_wa_iframe_block_init() {
  */
 function wawp_iframe_not_loaded_notice_msg() {
 	echo "<div class='error'><p><strong>";
-	echo NAME . '</strong> requires that Wild Apricot for Wordpress is installed and activated.</p></div>';
+	echo WAWP_IFRAME_NAME . '</strong> requires that Wild Apricot for Wordpress is installed and activated.</p></div>';
 	unset($_GET['activate']);
 	return;
 }
@@ -58,11 +58,11 @@ function wawp_iframe_not_loaded_die() {
 // function add_to_addon_list() {
 	if (class_exists('WAWP\Addon')) {
 		WAWP\Addon::instance()::new_addon(array(
-			'slug' => SLUG,
-			'name' => NAME,
+			'slug' => WAWP_IFRAME_SLUG,
+			'name' => WAWP_IFRAME_NAME,
 			'filename' => plugin_basename(__FILE__),
-			'license_check_option' => 'license-check-' . SLUG,
-			'show_activation_notice' => 'show_notice_activation_' . SLUG,
+			'license_check_option' => WAWP_IFRAME_LICENSE_CHECK,
+			'show_activation_notice' => WAWP_IFRAME_SHOW_NOTICE_ACTIVATION,
 			'is_addon' => 1,
 			'blocks' => array(
 				'wawp/wawp-addon-wa-iframe',
@@ -83,7 +83,7 @@ function wawp_iframe_activate() {
 		return;
 	}
 
-	WAWP\Addon::instance()::activate(SLUG);
+	WAWP\Addon::instance()::activate(WAWP_IFRAME_SLUG);
 }
 
 /**
@@ -94,7 +94,7 @@ register_deactivation_hook(plugin_basename(__FILE__), 'wawp_iframe_deactivate');
 function wawp_iframe_deactivate() {
 	// remove from addons list
 	$addons = get_option('wawp_addons');
-	unset($addons[SLUG]);
+	unset($addons[WAWP_IFRAME_SLUG]);
 	update_option('wawp_addons', $addons);
 }
 
