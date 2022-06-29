@@ -1,12 +1,12 @@
 <?php
 /**
- * Plugin Name:       Wild Apricot iFrame Add-on for WAWP
- * Description:       Showcase a Wild Apricot widget on your WordPress site with a Gutenberg block!
+ * Plugin Name:       WAP Wild Apricot iFrame Add-on
+ * Description:       Showcase a Wild Apricot widget using an iframe on your WordPress site with a Gutenberg block!
  * Requires at least: 5.7
  * Requires PHP:      7.0
- * Version:           0.1.0
+ * Version:           1.0
  * Author:            NewPath Consulting
- * License:           GPL-2.0-or-later
+ * License:           GPL v2 or later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:       wawp-addon-wa-iframe
  *
@@ -20,7 +20,6 @@
  *
  * @see https://developer.wordpress.org/block-editor/tutorials/block-tutorial/writing-your-first-block-type/
  */
-
 
 
 const SLUG = 'wawp-addon-iframe'; 
