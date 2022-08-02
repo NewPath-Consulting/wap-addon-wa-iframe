@@ -22,7 +22,7 @@
  */
 
 
-const WAWP_IFRAME_SLUG = 'wawp-addon-iframe'; 
+const WAWP_IFRAME_SLUG = 'wap-addon-iframe'; 
 const WAWP_IFRAME_SHOW_NOTICE_ACTIVATION = 'show_notice_activation_' . WAWP_IFRAME_SLUG;
 const WAWP_IFRAME_LICENSE_CHECK = 'license-check-' . WAWP_IFRAME_SLUG;
 const WAWP_IFRAME_NAME = 'Wild Apricot iFrame Add-on for WAP';
@@ -30,7 +30,7 @@ const WAWP_IFRAME_NAME = 'Wild Apricot iFrame Add-on for WAP';
 add_action( 'init', 'create_block_wawp_addon_wa_iframe_block_init' );
 function create_block_wawp_addon_wa_iframe_block_init() {
 	if (!class_exists('WAWP\Addon')) {
-		wawp_iframe_not_loaded_die();
+		add_action('admin_init', 'wawp_iframe_not_loaded_die');
 		return;
 	}
 	$license_valid = WAWP\Addon::instance()::has_valid_license(WAWP_IFRAME_SLUG);
@@ -43,7 +43,7 @@ function create_block_wawp_addon_wa_iframe_block_init() {
  * Error message for if WAWP is not installed or activated.
  */
 function wawp_iframe_not_loaded_notice_msg() {
-	echo "<div class='error'><p><strong>";
+	echo "<div class='notice notice-error'><p><strong>";
 	echo WAWP_IFRAME_NAME . '</strong> requires that Wild Apricot for Wordpress is installed and activated.</p></div>';
 	unset($_GET['activate']);
 	return;
@@ -79,7 +79,7 @@ function wawp_iframe_not_loaded_die() {
 register_activation_hook(plugin_basename(__FILE__), 'wawp_iframe_activate');
 function wawp_iframe_activate() {
 	if (!class_exists('WAWP\Addon')) {
-		wawp_not_loaded_die();
+		add_action('admin_init', 'wawp_iframe_not_loaded_die');
 		return;
 	}
 
