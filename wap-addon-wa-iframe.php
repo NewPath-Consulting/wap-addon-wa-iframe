@@ -4,7 +4,7 @@
  * Description:       Showcase a Wild Apricot widget using an iframe on your WordPress site with a Gutenberg block!
  * Requires at least: 5.7
  * Requires PHP:      7.4
- * Version:           1.0
+ * Version:           1.0.0
  * Author:            NewPath Consulting
  * License:           GPL v2 or later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
