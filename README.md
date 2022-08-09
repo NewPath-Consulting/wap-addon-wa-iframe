@@ -4,13 +4,17 @@ Tags: wap, wildapricot, wild apricot, sso, membership
 Requires at least: 5.7
 Tested up to: 6.0
 Requires PHP: 7.4
-Stable Tag: 1.0.0
+Stable Tag: 1.0b4
 License: GPL v2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-# WAP Wild Apricot iFrame Add On
 
 This plugin installs a Gutenberg block which allows the user to include an iFrame with a Wild Apricot widget.
+
+# Release History
+August 9 2022 - 1.0b4 - submitted to WP Repo
+
+# WAP Wild Apricot iFrame Add On
 
 ## How to install
 0. Clone or download this repository.
