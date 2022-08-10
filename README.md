@@ -1,32 +1,28 @@
 === WildApricot Press iFrame Add-on ===
 Contributors: nataliebrotherton, asirota
-Tags: wap, wildapricot, wild apricot, sso, membership
+Tags: wildapricot, wild apricot, membership, event management, events, membership management
 Requires at least: 5.7
 Tested up to: 6.0
 Requires PHP: 7.4
-Stable Tag: 1.0b4
+Stable Tag: 1.0.0
 License: GPL v2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
 
 This plugin installs a Gutenberg block which allows the user to include an iFrame with a Wild Apricot widget.
 
-# Release History
-August 9 2022 - 1.0b4 - submitted to WP Repo
-
 # WAP Wild Apricot iFrame Add On
 
 ## How to install
-0. Clone or download this repository.
-1. Compress the plugin folder.
-2. Upload the plugin zip archive to your WordPress site using the plugin installer.
+1. Download the latest release under the Releases tab in Githuhb
+2. Use the Plugins > Add New feature and upload the compressed zip archive to your WordPress site.
+3. Activate the plugin
+4. Add a License key under WildApricot Press > Licensing.
 
-OR
 
-0. Clone or download this repository directly in your WordPress site's `wp-content/plugins` folder.
-1. Browse to the "Plugins" page on your site, look for "WAP Wild Apricot iFrame Add-on", and activate the plugin.
+To install this add-on, you must install [Wild Apricot Press](https://github.com/NewPath-Consulting/Wild-Apricot-For-Wordpress/blob/master/README.md) first. You will also need to obtain a license key, at the [NewPath website](https://newpathconsulting.com/wap), to enable this add-on. 
 
-You must also obtain a [free license to enable use](https://github.com/NewPath-Consulting/Wild-Apricot-Press#license). See the [NewPath website](https://newpathconsulting.com/wawp) to register for a free license.
+The add-on can be installed using the standard plugin installation procedure. Go to Plugins -> Add New and upload the plugin archive file. Once installed, go to the [WAP License Key screen](https://github.com/NewPath-Consulting/Wild-Apricot-For-Wordpress/blob/master/README.md#licensing-wawp) > (WAP Settings > Licensing), to add your WAP license key. Free add-ons, such as the Member Directory, use the same license key, as the core WAP plugin.
 
 ## How to use
 1. Make a new post or page.
@@ -47,16 +43,16 @@ Details on all available Wild Apricot widgets that can be used in an iframe blac
 
 ## How to contribute
 
-#### Setup
+### Setup
 0. Clone this repository in your WordPress site's `wp-content/plugins` folder.
 1. Follow the instructions on [WordPress's block development environment setup tutorial](https://developer.wordpress.org/block-editor/handbook/tutorials/devenv/).
 2. Enter the command `npm install` in the root of this directory.
 
-#### Run and test
+### Run and test
 3. Run `npm start` to run the React compiler.
 4. To test this plugin, activate it from the plugin UI and find "WAP Wild Apricot iFrame" in the block inserter. Since the plugin folder is already in the plugins directory, there is no need to reinstall it when you're testing. **Always make sure the build (in `build`) files are up-to-date when testing this plugin**.
 
-#### Other useful `npm` commands
+### Other useful `npm` commands
 `npm start`
 Starts the build for development.
 
@@ -74,3 +70,7 @@ Lints JavaScript files.
 
 `npm run packages-update`
 Updates WordPress packages to the latest version.
+
+# Release History
+August 9 2022 - 1.0.0 - first public release
+June 30 2022 - 1.0b3 - fixed license code
