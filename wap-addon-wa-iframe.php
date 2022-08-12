@@ -39,6 +39,15 @@ function create_block_wawp_addon_wa_iframe_block_init() {
 
 }
 
+add_filter('plugin_action_links_' . plugin_basename(__FILE__), 'add_action_links');
+function add_action_links($links) {
+	$mylinks = array(
+		'<a href="' . admin_url('admin.php?page=wap-licensing') . '">Settings</a>',
+
+	);
+	return array_merge($links, $mylinks);
+}
+
 /**
  * Error message for if WAWP is not installed or activated.
  */
