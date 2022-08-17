@@ -90,8 +90,8 @@ function wawp_iframe_activate() {
  * Deactivation function.
  * Deletes the plugin from the list of WAWP plugins in the options table.
  */
-register_deactivation_hook(plugin_basename(__FILE__), 'wawp_iframe_deactivate');
-function wawp_iframe_deactivate() {
+register_uninstall_hook(plugin_basename(__FILE__), 'wawp_iframe_uninstall');
+function wawp_iframe_uninstall() {
 	// remove from addons list
 	$addons = get_option('wawp_addons');
 	unset($addons[WAWP_IFRAME_SLUG]);
