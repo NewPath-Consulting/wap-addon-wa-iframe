@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name:       WildApricot Press iFrame Add-on
+ * Plugin Name:       NewPath WildApricotPress Add-on – iFrame Widget
  * Description:       Add a WildApricot widget using an iframe on your WordPress site with a block
  * Requires at least: 5.7
  * Requires PHP:      7.4
