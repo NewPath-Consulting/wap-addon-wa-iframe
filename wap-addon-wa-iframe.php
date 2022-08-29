@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name:       WildApricot Press iFrame Add-on
+ * Plugin Name:       NewPath WildApricotPress Add-on – iFrame Widget
  * Description:       Add a WildApricot widget using an iframe on your WordPress site with a block
  * Requires at least: 5.7
  * Requires PHP:      7.4
@@ -37,6 +37,15 @@ function create_block_wawp_addon_wa_iframe_block_init() {
 	if (!$license_valid) return;
 	register_block_type_from_metadata( __DIR__ );
 
+}
+
+add_filter('plugin_action_links_' . plugin_basename(__FILE__), 'add_action_links');
+function add_action_links($links) {
+	$mylinks = array(
+		'<a href="' . admin_url('admin.php?page=wap-licensing') . '">Settings</a>',
+
+	);
+	return array_merge($links, $mylinks);
 }
 
 /**

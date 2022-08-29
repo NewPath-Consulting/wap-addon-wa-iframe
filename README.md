@@ -1,4 +1,4 @@
-=== WildApricot Press iFrame Add-on ===
+=== NewPath WildApricotPress Add-on – iFrame Widget ===
 Contributors: nataliebrotherton, asirota
 Tags: wildapricot, wild apricot, membership, event management, events, membership management
 Requires at least: 5.7
@@ -11,7 +11,7 @@ License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
 This plugin installs a Gutenberg block which allows the user to include an iFrame with a Wild Apricot widget.
 
-# WAP Wild Apricot iFrame Add On
+# NewPath WildApricotPress Add-on – iFrame Widget
 
 ## How to install
 1. Download the latest release under the Releases tab in Githuhb
