@@ -57,4 +57,5 @@ All available WildApricot widgets that can be used in an iframe wiget block are 
 == Changelog ==
 
 = August 9 2022 - 1.0.0 - first public release =
+
 = June 30 2022 - 1.0b3 - fixed license code =
