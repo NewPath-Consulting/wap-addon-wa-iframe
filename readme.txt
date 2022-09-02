@@ -23,7 +23,7 @@ To install this add-on, you must install [NewPath Wild Apricot Press](https://wo
 - Resizing features to support height and width of the iframe
 - Insert into a page or post using the block editor
 
-Check out the [FAQ section](https://wordpress.org/plugins/xxx/#faq) and [screenshots](https://wordpress.org/plugins/xxx/#screenshots) for more details.
+Check out the [FAQ section](https://wordpress.org/plugins/newpath-wildapricotpress-add-on-iframe-widget/#faq) and [screenshots](https://wordpress.org/plugins/newpath-wildapricotpress-add-on-iframe-widget/#screenshots) for more details.
 
 ## License
 Please visit the [NewPath WildApricot Press website](https://newpathconsulting.com/wap/) to obtain your license key or to inquire further about the plugin!
