@@ -4,7 +4,7 @@ Tags: wildapricot, wild apricot, membership, iframe, widget
 Requires at least: 5.7
 Tested up to: 6.0
 Requires PHP: 7.4
-Stable Tag: 1.0.0
+Stable Tag: 1.0.1
 License: GPL v2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -55,6 +55,8 @@ All available WildApricot widgets that can be used in an iframe wiget block are 
 3. WildApricot Press iframe member profile
 
 == Changelog ==
+
+= November 7 2022 - 1.0.1 - allowing any WildApricot domain or custom domain =
 
 = August 9 2022 - 1.0.0 - first public release =
 
