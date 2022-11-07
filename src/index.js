@@ -29,7 +29,7 @@
 	 attributes: {
 		 domain_name: {
 			 type: 'string',
-			 default: 'newpathconsulting'
+			 default: 'https://newpathconsulting.wildapricot.org'
 		 },
 		 widget_url: {
 			 type: 'string',
@@ -60,15 +60,15 @@
  } );
 
 export default function generateiFrame(attributes) {
-	var url = "https://" + attributes.domain_name + ".wildapricot.org";
+	var url = attributes.domain_name;
 	return (            
 		<React.Fragment>
 			<iframe
 				width={attributes.width}
 				height={attributes.height}
 				src={url + "/" + attributes.widget_url}
-				className={"wawp " + attributes.name}
-				frameborder={'no'}
+				className={"wawp-iframe " + attributes.name}
+				frameBorder={'no'}
 				sandbox={"allow-same-origin allow-scripts allow-popups allow-forms"}
 				onload={'tryToEnableWACookies("' + url + '");'}
 			></iframe>
