@@ -4,7 +4,7 @@
  * Description:       Add a WildApricot widget using an iframe on your WordPress site with a block
  * Requires at least: 5.7
  * Requires PHP:      7.4
- * Version:           1.0.0
+ * Version:           1.0.1
  * Author:            NewPath Consulting
  * License:           GPL v2 or later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
