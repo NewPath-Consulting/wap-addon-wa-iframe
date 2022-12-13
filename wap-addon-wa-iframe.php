@@ -25,7 +25,7 @@
 const WAWP_IFRAME_SLUG = 'wap-addon-iframe'; 
 const WAWP_IFRAME_SHOW_NOTICE_ACTIVATION = 'show_notice_activation_' . WAWP_IFRAME_SLUG;
 const WAWP_IFRAME_LICENSE_CHECK = 'license-check-' . WAWP_IFRAME_SLUG;
-const WAWP_IFRAME_NAME = 'Wild Apricot iFrame Add-on for WAP';
+const WAWP_IFRAME_NAME = 'NewPath WildApricotPress Add-on – iFrame Widget';
 
 add_action( 'init', 'create_block_wawp_addon_wa_iframe_block_init' );
 function create_block_wawp_addon_wa_iframe_block_init() {
@@ -65,22 +65,19 @@ function wawp_iframe_not_loaded_die() {
 	add_action('admin_notices', 'wawp_iframe_not_loaded_notice_msg');
 }
 
-// add_action('init', 'add_to_addon_list');
-// function add_to_addon_list() {
-	if (class_exists('WAWP\Addon')) {
-		WAWP\Addon::instance()::new_addon(array(
-			'slug' => WAWP_IFRAME_SLUG,
-			'name' => WAWP_IFRAME_NAME,
-			'filename' => plugin_basename(__FILE__),
-			'license_check_option' => WAWP_IFRAME_LICENSE_CHECK,
-			'show_activation_notice' => WAWP_IFRAME_SHOW_NOTICE_ACTIVATION,
-			'is_addon' => 1,
-			'blocks' => array(
-				'wawp/wawp-addon-wa-iframe',
-			)
-		));
-	}
-// }
+if (class_exists('WAWP\Addon')) {
+	WAWP\Addon::instance()::new_addon(array(
+		'slug' => WAWP_IFRAME_SLUG,
+		'name' => WAWP_IFRAME_NAME,
+		'filename' => plugin_basename(__FILE__),
+		'license_check_option' => WAWP_IFRAME_LICENSE_CHECK,
+		'show_activation_notice' => WAWP_IFRAME_SHOW_NOTICE_ACTIVATION,
+		'is_addon' => 1,
+		'blocks' => array(
+			'wawp/wawp-addon-wa-iframe',
+		)
+	));
+}
 
 /**
  * Activation function.
