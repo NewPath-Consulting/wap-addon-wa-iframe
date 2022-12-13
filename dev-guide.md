@@ -50,6 +50,16 @@ In order to build the block code, you must have Node installed and a development
 * Watch and build project files (development mode): **`npm run start`**
 * Build project files (production mode): **`npm run build`**
 
+## How the plugin works
+### Activation
+When the plugin is first activated, it will immediately check if WAP is installed, since the plugin functionality depends on WAP. If it is not installed, the plugin will not activate and display an admin notice informing the user WAP must be installed and active for the plugin to work. 
+
+It will then use the WAP `Addon` class to check if there's a valid license for this block. If there is, the plugin will register the Gutenberg block using the block metadata located in `block.json`. If there is not a valid license, the block will **not** activate and instead display an admin notice informing the user to input a valid license in the WAP settings.
+
+The iFrame plugin data also gets added to WAP's internal data structure through the `Addon` class.
+
+### Deactivation
+When the plugin is deactivated, its data will be removed from the internal data structure WAP uses to keep track of NewPath plugins.
 
 ## How the block works
 Before contributing to this project, reading the WordPress Gutenberg Block documentation is highly recommended.
